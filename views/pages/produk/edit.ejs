@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <%- include ('../components/head') %>
+    <title>Edit data produk</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <%- include ('../components/navbar') %>
+    <justify>
+    <br><br><br><br>
+    <h1>Edit data Produk</h1>
+    <br><br>
+    <form action="/produk/update/<%= skincare._id %>" method="POST">
+    <div class="input-group">
+        <label>Nama</label>
+        <input type="text" name="nama" value="<%= skincare.nama %>">
+        <input type="hidden" name="id" value="<%= skincare.id %>">
+    </div>
+    <div class="input-group">
+    <label>Jenis</label>
+    <input type="text" name="jenis" value="<%= skincare.jenis %>">
+</div>
+
+<button type="submit">Update</button>
+
+<a href="/produk">Kembali</a>
+</justify></form>
+<!-- <footer>
+    <p><p>Produk DKS Store Banyuwangi</p></p>
+</footer> -->
+<%- include ('../components/footer') %>
+</body>
+</html>

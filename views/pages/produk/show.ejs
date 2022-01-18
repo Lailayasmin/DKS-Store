@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <%- include ('../components/head') %>
+        <br>
+        <title>Detail Produk</title>
+        <link rel="stylesheet " href="/assets/style.css">
+    </head>
+
+    <body>
+        <%- include ('../components/navbar') %>
+
+        <a href="/produk">Kembali</a>
+        <h1>Detail Produk</h1>
+        <ul></div>
+            <div class="col-md-4">
+                <img class="img-fluid"
+                src="data:image/<%=skincare.img.contentType%>;base64,<%=skincare.img.data.toString('base64')%>"
+                alt="image-produk">
+            </div>
+            <li>nama : <strong> <%= skincare.nama %></strong></li>
+            <li>jenis : <strong> <%= skincare.jenis %></strong></li>
+        </ul>
+
+        <a href="/produk/<%= skincare._id %>/edit">Edit</a>
+        <a href="/produk/<%= skincare._id %>/hapus">hapus</a>
+
+        <footer>
+            <!-- <p>Produk DKS Store Banyuwangi</p> -->
+        </footer>
+        </body>
+        </html>
+    </br>
+    </body>
+    <%- include ('../components/footer') %>
+</html>

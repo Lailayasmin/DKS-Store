@@ -1,0 +1,33 @@
+<html>
+    <head>
+            <%- include ('../components/head') %>
+
+        <title>Produk</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <%- include ('../components/navbar') %>
+        <p></p>
+        <a href="/produk/create">Tambah Produk</a>
+        <br><br><br>
+        <h1>Daftar Produk ( <%=skincare.length %>) </h1>
+        <form action="/produk">
+        <input type="text" name="keyword">
+        <button type="submit">Cari Produk</button>
+    </form>
+        <ul>
+            <% if (skincare.length >0) { %>
+            <% skincare.forEach (function(skincare){ %>
+                <li> <a href="/produk/<%= skincare.id %>">
+             <%= skincare.nama %> </li>
+        <% }); %>
+        <% } else { %>
+        <p>Data Produk Skincare Kosong </p>
+            <% } %>
+    </ul>
+        <!-- <footer>
+            <p>Produk DKS Store Banyuwangi</p>
+        </footer> -->
+        <%- include ('../components/footer') %>
+    </body>
+</html>

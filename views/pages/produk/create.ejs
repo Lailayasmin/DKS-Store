@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <%- include ('../components/head') %>
+        <title>Tambah Produk</title>
+</head>
+
+<body>
+    <%- include ('../components/navbar') %>
+
+<br>
+        <div class="row" style="margin-left: 30%; margin-top: 30px;">
+
+            <form action="/produk" method="POST" enctype="multipart/form-data">
+                <h3></h3>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="input-group">ID Barang</label>
+                    <input type="text" class="form-control" id="id" name="id" aria-describedby="id">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="input-group">Nama Barang</label>
+                    <input type="text" class="form-control" id="nama" name="nama">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="input-group">Jenis Barang</label>
+                    <input type="text" class="form-control" id="jenis" name="jenis">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="input-group">Harga</label>
+                    <input type="numeric" class="form-control" id="harga" name="harga">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="input-group">Gambar</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="/produk">
+                    <button type="submit" class="btn btn-warning">Kembali</button>
+                </a>
+            </form>
+
+
+        </div>
+
+
+<%- include ('../components/footer') %>
+
+</body>
